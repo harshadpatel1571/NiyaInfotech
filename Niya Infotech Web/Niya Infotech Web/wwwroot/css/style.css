@@ -67,9 +67,9 @@ Default CSS
 @import url("css2-1.css");
 @import url("css2-2.css");*/
 :root {
-    --main-font-family: "Open Sans", sans-serif;
-    --heading-font-family: "Jost", sans-serif;
-    --monoton-font-family: "Monoton", cursive;
+    --main-font-family: "Poppins", sans-serif;
+    --heading-font-family: "Poppins", sans-serif;
+    --monoton-font-family: "Poppins", cursive;
     --main-color: #FF6700;
     --optional-color: #3E019A;
     --white-color: #ffffff;
@@ -79,6 +79,7 @@ Default CSS
     --transition: .6s;
     --btn-gradient-color: radial-gradient(circle, #FF6700, #f8c600, #eed900, #e0ec00, #cdff05);
 }
+
 
 body {
   padding: 0;
