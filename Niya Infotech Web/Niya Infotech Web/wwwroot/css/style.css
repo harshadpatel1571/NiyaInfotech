@@ -77,7 +77,7 @@ Default CSS
     --paragraph-color: #646464;
     --font-size: 16px;
     --transition: .6s;
-    --btn-gradient-color: radial-gradient(circle, #FF6700, #f8c600, #eed900, #e0ec00, #cdff05);
+    --btn-gradient-color: radial-gradient(circle, #a66bff, #c666ef, #dd62df, #ee61cf, #fb64bf);
 }
 
 
@@ -3792,14 +3792,14 @@ Overview Area CSS
 Page Banner Area CSS
 =================================================*/
 .page-banner-area {
-  background-image: url(../images/page-banner/banner-bg.jpg);
+  /*background-image: url(../images/page-banner/banner-bg.jpg);*/
   background-position: center center;
   background-size: cover;
   background-repeat: no-repeat;
-  padding-top: 120px;
-  padding-bottom: 150px;
+  padding-top: 100px;
+  padding-bottom: 1px;
 }
-.page-banner-area.bg-2 {
+/*.page-banner-area.bg-2 {
   background-image: url(../images/page-banner/banner-bg-2.jpg);
 }
 .page-banner-area.bg-3 {
@@ -3814,7 +3814,7 @@ Page Banner Area CSS
 .page-banner-area.bg-6 {
   background-image: url(../images/page-banner/banner-bg-6.jpg);
   background-attachment: fixed;
-}
+}*/
 
 .page-banner-content h2 {
   font-size: 70px;
@@ -7633,4 +7633,5 @@ Buy Now Btn
   100% {
     transform: scale3d(1, 1, 1);
   }
+
 }/*# sourceMappingURL=style.css.map */

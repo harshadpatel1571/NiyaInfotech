@@ -1,0 +1,120 @@
+﻿@{
+    ViewData["Title"] = "About Page";
+}
+
+<div class="page-banner-area jara d-flex justify-content-center align-items-center" data-jarallax='{"speed": 0.3}'>
+    <div class="about-wrap-image" data-tilt="">
+        <img src="~/images/page-banner/banner-bg1.png" alt="image" class="img-fluid" data-aos="fade-down" data-aos-delay="80" data-aos-duration="800" data-aos-once="true">
+    </div>
+</div>
+
+<!-- Start Services Area -->
+<div class="services-area ptb-100">
+    <div class="container">
+        <div class="section-title">
+            <span>SERVICES</span>
+            <h2>We Provide the Best Quality <b>Services</b> <span class="overlay"></span></h2>
+            <p>Offering innovative IT solutions and superior support to boost your business.</p>
+        </div>
+
+        <div class="row justify-content-center">
+            <div class="col-lg-4 col-md-6">
+                <div class="services-item">
+                    <div class="services-image">
+                        <a asp-controller="Service" asp-action="WebServiceDetails"><img src="~/images/services/services-1.jpg" alt="image"></a>
+                    </div>
+                    <div class="services-content">
+                        <h3>
+                            <a asp-controller="Service" asp-action="WebServiceDetails">Web Development</a>
+                        </h3>
+                        <p>Transform Your Online Presence with Our Expert Website Development Services</p>
+                        <a asp-controller="Service" asp-action="WebServiceDetails" class="services-btn">View More</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-lg-4 col-md-6">
+                <div class="services-item">
+                    <div class="services-image">
+                        <a asp-controller="Service" asp-action="SoftwareServiceDetails"><img src="~/images/services/services-3.jpg" alt="image"></a>
+                    </div>
+                    <div class="services-content">
+                        <h3>
+                            <a asp-controller="Service" asp-action="SoftwareServiceDetails">Software Development</a>
+                        </h3>
+                        <p>Transform Your Vision into Reality with Our Software Development Services!</p>
+                        <a asp-controller="Service" asp-action="SoftwareServiceDetails" class="services-btn">View More</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-lg-4 col-md-6">
+                <div class="services-item">
+                    <div class="services-image">
+                        <a asp-controller="Service" asp-action="AppServiceDetails"><img src="~/images/services/services-2.jpg" alt="image"></a>
+                    </div>
+                    <div class="services-content">
+                        <h3>
+                            <a asp-controller="Service" asp-action="AppServiceDetails">App Development</a>
+                        </h3>
+                        <p>Transform Ideas into Reality with Our Expert Application Development Services</p>
+                        <a asp-controller="Service" asp-action="AppServiceDetails" class="services-btn">View More</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-lg-4 col-md-6">
+                <div class="services-item">
+                    <div class="services-image">
+                        <a asp-controller="Service" asp-action="DesignServiceDetails"><img src="~/images/services/services-4.jpg" alt="image"></a>
+                    </div>
+                    <div class="services-content">
+                        <h3>
+                            <a asp-controller="Service" asp-action="DesignServiceDetails">Graphics & UI/UX Design</a>
+                        </h3>
+                        <p>Enhance Your Digital Presence with Expert Graphics and UI/UX Design!</p>
+                        <a asp-controller="Service" asp-action="DesignServiceDetails" class="services-btn">View More</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-lg-4 col-md-6">
+                <div class="services-item">
+                    <div class="services-image">
+                        <a asp-controller="Service" asp-action="DigitalMarketingServiceDetails"><img src="~/images/services/services-6.jpg" alt="image"></a>
+                    </div>
+                    <div class="services-content">
+                        <h3>
+                            <a asp-controller="Service" asp-action="DigitalMarketingServiceDetails">Digital Marketing</a>
+                        </h3>
+                        <p>Elevate your brand with our comprehensive digital marketing solutions</p>
+                        <a asp-controller="Service" asp-action="DigitalMarketingServiceDetails" class="services-btn">View More</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-lg-4 col-md-6">
+                <div class="services-item">
+                    <div class="services-image">
+                        <a asp-controller ="Service" asp-action="CloudNetworkingServiceDetails"><img src="~/images/services/services-5.jpg" alt="image"></a>
+                    </div>
+                    <div class="services-content">
+                        <h3>
+                            <a asp-controller="Service" asp-action="CloudNetworkingServiceDetails">Cloud & Networking</a>
+                        </h3>
+                        <p> Elevate your business with flexible cloud services and reliable connectivity</p>
+                        <a asp-controller="Service" asp-action="CloudNetworkingServiceDetails" class="services-btn">View More</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="services-shape-1">
+        <img src="~/images/services/services-shape-1.png" alt="image">
+    </div>
+    <div class="services-shape-2">
+        <img src="~/images/services/services-shape-2.png" alt="image">
+    </div>
+</div>
+<!-- End Services Area -->

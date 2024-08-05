@@ -18,10 +18,36 @@ namespace Niya_Infotech_Web.Controllers
             return View();
         }
 
-        public IActionResult Privacy()
+        public IActionResult About()
         {
             return View();
         }
+
+        public IActionResult Services()
+        {
+            return View();
+        }
+
+        public IActionResult Projects()
+        {
+            return View();
+        }
+
+        public IActionResult Testimonials()
+        {
+            return View();
+        }
+
+        public IActionResult Contact()
+        {
+            return View();
+        }
+
+        public IActionResult FAQ()
+        {
+            return View();
+        }
+
 
         [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
         public IActionResult Error()
