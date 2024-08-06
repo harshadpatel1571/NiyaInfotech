@@ -7,7 +7,7 @@ Default CSS
     --black-color: #000000;
 }
 
-.switch-box {
+/*.switch-box {
   position: fixed;
   z-index: 1;
   right: 95px;
@@ -67,7 +67,7 @@ Default CSS
 }
 .switch-box .slider.round:before {
   border-radius: 50%;
-}
+}*/
 
 .theme-light .black-logo {
   display: block;
@@ -373,7 +373,7 @@ Default CSS
   color: var(--white-color);
 }
 .theme-dark .single-testimonials-card p {
-  background-color: #0e0e0e;
+    background-color: #ffffff;
 }
 .theme-dark .single-testimonials-card .info-item-box h4 span {
   color: var(--white-color);
@@ -1411,9 +1411,9 @@ Default CSS
 .theme-dark .blog-details-desc .article-leave-comment .form-cookies-consent a:hover {
   color: var(--optional-color);
 }
-.theme-dark .blog-details-desc .article-leave-comment .form-cookies-consent [type=checkbox]:checked + label, .theme-dark .blog-details-desc .article-leave-comment .form-cookies-consent [type=checkbox]:not(:checked) + label {
+./*theme-dark .blog-details-desc .article-leave-comment .form-cookies-consent [type=checkbox]:checked + label, .theme-dark .blog-details-desc .article-leave-comment .form-cookies-consent [type=checkbox]:not(:checked) + label {
   color: var(--white-color);
-}
+}*/
 .theme-dark .blog-details-desc .article-leave-comment .form-cookies-consent p {
   color: var(--white-color);
 }
