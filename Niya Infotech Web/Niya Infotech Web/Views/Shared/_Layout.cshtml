@@ -69,10 +69,10 @@
                                     <a asp-controller="Home" asp-action="Services" class="nav-link">Services</a>
                                 </li>
 
-                                <li class="nav-item">
+                                @* <li class="nav-item">
                                     <a asp-controller="Home" asp-action="Projects" class="nav-link">Project</a>
                                 </li>
-
+ *@
                                 <li class="nav-item">
                                     <a asp-controller="Home" asp-action="Testimonials" class="nav-link">Testimonials</a>
                                 </li>
@@ -265,9 +265,8 @@
                         <ul class="quick-links">
                             <li><a asp-controller="Home" asp-action="About">About Us</a></li>
                             <li><a asp-controller="Home" asp-action="Services">Services</a></li>
-                            <li><a asp-controller="Home" asp-action="Projects">Projects</a></li>
+                            @* <li><a asp-controller="Home" asp-action="Projects">Projects</a></li> *@
                             <li><a asp-controller="Home" asp-action="Testimonials">Testimonials</a></li>
-                            @* <li><a href="projects.html">Projects</a></li> *@
                         </ul>
                     </div>
                 </div>
@@ -280,22 +279,18 @@
                             <li><a asp-controller="Home" asp-action="Contact">Contact Us</a></li>
                             <li><a href="purchase-guide.html">Get In Touch</a></li>
                             <li><a asp-controller="Home" asp-action="FAQ">FAQ's</a></li>
-                            @* <li><a href="terms-of-service.html">Terms of Service</a></li>
-                            <li><a href="privacy-policy.html">Privacy Policy</a></li> *@
                         </ul>
                     </div>
-                </div>
-
+                </div> 
+                
                 <div class="col-lg-3 col-md-6">
-                    <div class="single-footer-widget" data-aos="fade-up" data-aos-delay="80" data-aos-duration="800" data-aos-once="true">
-                        <h3>Subscribe Newsletter</h3>
-
-                        <form class="newsletter-form" data-bs-toggle="validator">
-                            <input type="email" class="input-newsletter" placeholder="Enter your email" name="EMAIL" required="" autocomplete="off">
-
-                            <button type="submit" class="default-btn">Subscribe</button>
-                            <div id="validator-newsletter" class="form-result"></div>
-                        </form>
+                    <div class="single-footer-widget ps-5 text-white" data-aos="fade-up" data-aos-delay="70" data-aos-duration="700" data-aos-once="true">
+                        <h3 class="mb-4">Reach Us</h3>
+                        <ul class="list-unstyled">
+                            <li class="mb-3 d-flex align-items-center"><i class="ri-phone-fill me-2"></i><a class="text-white" href="tel:9157791901">+91 91577 91901/02</a></li>
+                            <li class="mb-3 d-flex align-items-center"><i class="ri-mail-line me-2"></i><a class="text-white" href="mailto:info.niyainfotech@gmail.com"><span class="__cf_email__">info.niyainfotech@gmail.com</span></a></li>
+                            <li class="d-flex align-items-top"><i class="ri-map-pin-line me-2"></i>Office No.512, Runway Heights, 150ft Ring Road, Near Ayodhya Chowk, Rajkot - 360006</li>
+                        </ul>
                     </div>
                 </div>
             </div>

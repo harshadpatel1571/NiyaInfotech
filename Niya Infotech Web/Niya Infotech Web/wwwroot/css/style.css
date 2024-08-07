@@ -77,7 +77,7 @@ Default CSS
     --paragraph-color: #646464;
     --font-size: 16px;
     --transition: .6s;
-    --btn-gradient-color: radial-gradient(circle, #a66bff, #c666ef, #dd62df, #ee61cf, #fb64bf);
+    --btn-gradient-color: radial-gradient(circle, #fbb040, #f9ed32);
 }
 
 
@@ -2644,7 +2644,7 @@ Blog Area CSS
   width: 300px;
   background: #F2F1F3;
   border-color: #F2F1F3;
-  color: #9B8DAC;
+  color: #9B8DAC;   
   transition: var(--transition);
   padding: 0 0 0 25px;
   height: 70px;

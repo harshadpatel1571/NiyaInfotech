@@ -416,15 +416,15 @@ Default CSS
   color: #0e0e0e;
 }
 .theme-dark .talk-area {
-  background-color: #0e0e0e;
+    background-color: #14042c;
 }
 .theme-dark .talk-content .talk-bg-text {
   color: var(--black-color);
 }
 .theme-dark .talk-content #contactFormTwo .form-group .form-control {
-  color: var(--white-color);
-  background-color: var(--black-color);
-  border: 1px solid var(--black-color);
+    color: var(--white-color);
+    background-color: #14042c;
+    border: 1px solid #ffffff;
 }
 .theme-dark .talk-content #contactFormTwo .form-group .form-control::-moz-placeholder {
   color: var(--white-color);

@@ -1,5 +1,86 @@
-﻿@*
-    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
-*@
+﻿@model Niya_Infotech_Web.Models.Contactus
+
+
 @{
+    ViewData["Title"] = "About Page";
 }
+
+<div class="page-banner-area jara d-flex justify-content-center align-items-center" data-jarallax='{"speed": 0.3}'>
+    <div class="about-wrap-image" data-tilt="">
+        <img src="~/images/page-banner/contactus.png" alt="image" class="img-fluid" data-aos="fade-down" data-aos-delay="80" data-aos-duration="800" data-aos-once="true">
+    </div>
+</div>
+
+<!-- Start Talk Area -->
+<div class="talk-area ptb-100">
+    <div class="container">
+        <div class="row align-items-center">
+            <div class="col-lg-6 col-md-12">
+                <div class="talk-image" data-tilt="">
+                    <img src="~/images/talk/talk.png" alt="image">
+                </div>
+            </div>
+
+            <div class="col-lg-6 col-md-12">
+                <div class="talk-content margin-zero">
+                    <span>LET'S TALK</span>
+                    <h3>We Would Like To Hear From You Anytime <span class="overlay"></span></h3>
+
+                    <form id="contactFormTwo" asp-action="Contact" asp-controller="Home" method="post">
+                        <div class="row">
+                            <div class="col-lg-6 col-md-6">
+                                <div class="form-group">
+                                    <input type="text" name="Name" class="form-control" required data-error="Please enter your name" placeholder="Your name">
+                                    <div class="help-block with-errors"></div>
+                                </div>
+                            </div>
+
+                            <div class="col-lg-6 col-md-6">
+                                <div class="form-group">
+                                    <input type="email" name="Email" class="form-control" required data-error="Please enter your email" placeholder="Your email address">
+                                    <div class="help-block with-errors"></div>
+                                </div>
+                            </div>
+
+                            <div class="col-lg-6 col-md-6">
+                                <div class="form-group">
+                                    <input type="text" name="Subject" class="form-control" required data-error="Please enter your subject" placeholder="Your subject">
+                                    <div class="help-block with-errors"></div>
+                                </div>
+                            </div>
+
+                            <div class="col-lg-6 col-md-6">
+                                <div class="form-group">
+                                    <input type="number" name="Phone" class="form-control" required data-error="Please enter your phone" placeholder="Your phone">
+                                    <div class="help-block with-errors"></div>
+                                </div>
+                            </div>
+
+                            <div class="col-lg-12 col-md-12">
+                                <div class="form-group">
+                                    <textarea name="Message" class="form-control" cols="30" rows="6" required data-error="Please enter your message" placeholder="Your message..."></textarea>
+                                    <div class="help-block with-errors"></div>
+                                </div>
+                            </div>
+
+                            <div class="col-lg-12 col-md-12">
+                                <button type="submit" class="default-btn">Send Message<span></span></button>
+                                <div id="msgSubmitTwo" class="h3 text-center hidden"></div>
+                                <div class="clearfix"></div>
+                            </div>
+                        </div>
+                    </form>
+
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- End Talk Area -->
+<!-- Start Map Area -->
+<div class="container ptb-100">
+    <div class="map-location">
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3690.8173734632664!2d70.76599077529325!3d22.32274557967043!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3959c93964a2eb45%3A0xaf1add5cfd4be8b!2sNiya%20Infotech%20-%20End-to-End%20IT%20Solutions%20%7C%20Your%20Trusted%20Technology%20Partner!5e0!3m2!1sen!2sin!4v1723037706688!5m2!1sen!2sin" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+    </div>
+</div>
+<!-- End Map Area -->

@@ -7,10 +7,12 @@ namespace Niya_Infotech_Web.Controllers
     public class HomeController : Controller
     {
         private readonly ILogger<HomeController> _logger;
+        private readonly Contactus _contactus;
 
-        public HomeController(ILogger<HomeController> logger)
+        public HomeController(ILogger<HomeController> logger , Contactus contactus)
         {
             _logger = logger;
+            _contactus = contactus;
         }
 
         public IActionResult Index()
@@ -42,6 +44,7 @@ namespace Niya_Infotech_Web.Controllers
         {
             return View();
         }
+
 
         public IActionResult FAQ()
         {
