@@ -7634,4 +7634,19 @@ Buy Now Btn
     transform: scale3d(1, 1, 1);
   }
 
+    .contact-form .form-control {
+        background-color: #a1c0f1;
+        border-color: #a1c0f1; /* Optional: Match the border color with the background */
+        color: #333; /* Optional: Adjust the text color for better readability */
+    }
+
+    .contact-form .form-control::placeholder {
+        color: #666; /* Optional: Adjust the placeholder text color */
+    }
+
+    .contact-form .form-control:focus {
+        background-color: #a1c0f1; /* Keep the background color on focus */
+        border-color: #779cc7; /* Optional: Change border color on focus */
+    }
+
 }/*# sourceMappingURL=style.css.map */

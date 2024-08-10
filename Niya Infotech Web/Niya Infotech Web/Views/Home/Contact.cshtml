@@ -26,56 +26,71 @@
                     <span>LET'S TALK</span>
                     <h3>We Would Like To Hear From You Anytime <span class="overlay"></span></h3>
 
-                    <form id="contactFormTwo" asp-action="Contact" asp-controller="Home" method="post">
+                    
+                    <form class="contact-form" asp-action="Contact" method="post">
                         <div class="row">
-                            <div class="col-lg-6 col-md-6">
+                            <div class="col-lg-6 col-md-12">
                                 <div class="form-group">
-                                    <input type="text" name="Name" class="form-control" required data-error="Please enter your name" placeholder="Your name">
+                                    <label asp-for="Name" class="form-label">Your Name</label>
+                                    <input type="text" asp-for="Name" name="Name" style="background-color: #a1c0f1; border-color: #a1c0f1; color: #333;" class="form-control" required data-error="Please enter your name" placeholder="Your name">
+                                    <div class="invalid-feedback">Please enter your name</div>
+                                </div>
+                            </div>
+
+                            <div class="col-lg-6 col-md-12">
+                                <div class="form-group">
+                                    <label asp-for="Email" class="form-label">Your Email Address</label>
+                                    <input type="email" asp-for="Email" style="background-color: #a1c0f1; border-color: #a1c0f1; color: #333;" name="Email" class="form-control" required data-error="Please enter your email" placeholder="Your email address">
+                                    <div class="invalid-feedback">Please enter your email</div>
+                                </div>
+                            </div>
+
+                            <div class="col-lg-6 col-md-12">
+                                <div class="form-group">
+                                    <label asp-for="Subject" class="form-label">Subject</label>
+                                    <input type="text" asp-for="Subject" name="Subject" style="background-color: #a1c0f1; border-color: #a1c0f1; color: #333;" class="form-control" required data-error="Please enter your subject" placeholder="Your subject">
+                                    <div class="invalid-feedback">Please enter your subject</div>
+                                </div>
+                            </div>
+
+                            <div class="col-lg-6 col-md-12">
+                                <div class="form-group">
+                                    <label asp-for="Phone" class="form-label"></label>
+                                    <input type="number" asp-for="Phone" name="Phone" style="background-color: #a1c0f1; border-color: #a1c0f1; color: #333;" class="form-control" required data-error="Please enter your phone" placeholder="Your phone">
+                                    <div class="invalid-feedback">Please enter your phone</div>
+                                </div>
+                            </div>
+
+                            <div class="col-lg-12 col-md-6">
+                                <div class="form-group">
+                                    <label asp-for="Message" class="form-label"></label>
+                                    <textarea asp-for="Message" name="Message" style="background-color: #a1c0f1; border-color: #a1c0f1; color: #333;" class="form-control" cols="30" rows="6" required data-error="Please enter your message" placeholder="Your message..."></textarea>
                                     <div class="help-block with-errors"></div>
                                 </div>
                             </div>
 
-                            <div class="col-lg-6 col-md-6">
-                                <div class="form-group">
-                                    <input type="email" name="Email" class="form-control" required data-error="Please enter your email" placeholder="Your email address">
-                                    <div class="help-block with-errors"></div>
-                                </div>
-                            </div>
-
-                            <div class="col-lg-6 col-md-6">
-                                <div class="form-group">
-                                    <input type="text" name="Subject" class="form-control" required data-error="Please enter your subject" placeholder="Your subject">
-                                    <div class="help-block with-errors"></div>
-                                </div>
-                            </div>
-
-                            <div class="col-lg-6 col-md-6">
-                                <div class="form-group">
-                                    <input type="number" name="Phone" class="form-control" required data-error="Please enter your phone" placeholder="Your phone">
-                                    <div class="help-block with-errors"></div>
-                                </div>
-                            </div>
-
-                            <div class="col-lg-12 col-md-12">
-                                <div class="form-group">
-                                    <textarea name="Message" class="form-control" cols="30" rows="6" required data-error="Please enter your message" placeholder="Your message..."></textarea>
-                                    <div class="help-block with-errors"></div>
-                                </div>
-                            </div>
-
-                            <div class="col-lg-12 col-md-12">
-                                <button type="submit" class="default-btn">Send Message<span></span></button>
+                            <div class="col-lg-12 col-md-12 pt-3">
+                                <button type="submit" class="default-btn">Send Message</button>
                                 <div id="msgSubmitTwo" class="h3 text-center hidden"></div>
                                 <div class="clearfix"></div>
                             </div>
                         </div>
                     </form>
 
+
                 </div>
             </div>
         </div>
     </div>
 </div>
+
+@if (ViewBag.Message != null)
+{
+    <div class="alert alert-info">
+        @ViewBag.Message
+    </div>
+}
+
 <!-- End Talk Area -->
 <!-- Start Map Area -->
 <div class="container ptb-100">

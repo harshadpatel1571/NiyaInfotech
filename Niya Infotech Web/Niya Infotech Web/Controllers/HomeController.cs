@@ -1,18 +1,19 @@
 using Microsoft.AspNetCore.Mvc;
 using Niya_Infotech_Web.Models;
 using System.Diagnostics;
+using System.Net;
+using System.Net.Mail;
+
 
 namespace Niya_Infotech_Web.Controllers
 {
     public class HomeController : Controller
     {
         private readonly ILogger<HomeController> _logger;
-        private readonly Contactus _contactus;
 
-        public HomeController(ILogger<HomeController> logger , Contactus contactus)
+        public HomeController(ILogger<HomeController> logger )
         {
             _logger = logger;
-            _contactus = contactus;
         }
 
         public IActionResult Index()
@@ -43,6 +44,52 @@ namespace Niya_Infotech_Web.Controllers
         public IActionResult Contact()
         {
             return View();
+        }
+
+        [HttpPost]
+        public IActionResult Contact(Contactus model)
+        {
+            if (!ModelState.IsValid)
+            {
+                return View(model);
+            }
+
+            var name = model.Name;
+            var email = model.Email;
+            var subject = model.Subject;
+            var phone = model.Phone;
+            var message = model.Message;
+
+            try
+            {
+                var smtpClient = new SmtpClient("smtp.gmail.com")
+                {
+                    Port = 587,
+                    Credentials = new NetworkCredential("bodasahil14@gmail.com", "itzw nzlz bmru blvb"),
+                    EnableSsl = true,
+                };
+
+                var mailMessage = new MailMessage
+                {
+                    From = new MailAddress("bodasahil14@gmail.com"),
+                    Subject = subject,
+                    Body = $"Name: {name}\nEmail: {email}\nPhone: {phone}\nMessage: {message}",
+                    IsBodyHtml = false,
+                };
+
+                mailMessage.To.Add("bodasahil14@gmail.com");
+
+                smtpClient.Send(mailMessage);
+
+                ViewBag.Message = "Email sent successfully!";
+                ModelState.Clear();
+                return View();
+            }
+            catch (Exception ex)
+            {
+                ViewBag.Message = "Error occurred while sending the email. Please try again later.";
+                return View(model);
+            }
         }
 
 

@@ -3,8 +3,11 @@
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>@ViewData["Title"]Niya Infotech</title>
+    <title>Niya Infotech</title>
 
+    <link rel="icon" type="image/png" href="~/images/favicon.png">
+
+    <!-- Stylesheets -->
     <link href="~/css/animate.min.css" rel="stylesheet" />
     <link href="~/css/bootstrap.min.css" rel="stylesheet" />
     <link href="~/css/aos.css" rel="stylesheet" />
@@ -21,17 +24,9 @@
     <link href="~/css/remixicon.css" rel="stylesheet" />
     <link href="~/css/responsive.css" rel="stylesheet" />
     <link href="~/css/style.css" rel="stylesheet" />
-
 </head>
-<body>
 
-    @* <div class="preloader">
-    <div class="d-table">
-    <div class="d-table-cell">
-    <div class="lds-spinner"><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div></div>
-    </div>
-    </div>
-    </div> *@
+<body>
 
     <header class="main-header-area">
         <!-- Start Navbar Area -->
@@ -55,33 +50,27 @@
                             <img src="~/images/logo.png" alt="image">
                         </a>
 
-                        <div class="collapse navbar-collapse mean-menu" id="navbarSupportedContent">
+                        <div class="collapse navbar-collapse mean-menu" >
                             <ul class="navbar-nav ms-auto">
                                 <li class="nav-item">
-                                    <a asp-controller="Home" asp-action="Index" class="nav-link active">Home</a>
+                                    <a asp-controller="Home" asp-action="Index" class="nav-link @(ViewContext.RouteData.Values["action"].ToString() == "Index" ? "active" : "")">Home</a>
                                 </li>
 
                                 <li class="nav-item">
-                                    <a asp-controller="Home" asp-action="About" class="nav-link">About</a>
+                                    <a asp-controller="Home" asp-action="About" class="nav-link @(ViewContext.RouteData.Values["action"].ToString() == "About" ? "active" : "")">About</a>
                                 </li>
 
                                 <li class="nav-item">
-                                    <a asp-controller="Home" asp-action="Services" class="nav-link">Services</a>
-                                </li>
-
-                                @* <li class="nav-item">
-                                    <a asp-controller="Home" asp-action="Projects" class="nav-link">Project</a>
-                                </li>
- *@
-                                <li class="nav-item">
-                                    <a asp-controller="Home" asp-action="Testimonials" class="nav-link">Testimonials</a>
+                                    <a asp-controller="Home" asp-action="Services" class="nav-link @(ViewContext.RouteData.Values["action"].ToString() == "Services" ? "active" : "")">Services</a>
                                 </li>
 
                                 <li class="nav-item">
-                                    <a asp-controller="Home" asp-action="Contact" class="nav-link">Contact Us</a>
+                                    <a asp-controller="Home" asp-action="Testimonials" class="nav-link @(ViewContext.RouteData.Values["action"].ToString() == "Testimonials" ? "active" : "")">Testimonials</a>
                                 </li>
 
-
+                                <li class="nav-item">
+                                    <a asp-controller="Home" asp-action="Contact" class="nav-link @(ViewContext.RouteData.Values["action"].ToString() == "Contact" ? "active" : "")">Contact Us</a>
+                                </li>
                             </ul>
 
                             <div class="others-options d-flex align-items-center">
@@ -157,16 +146,16 @@
                         <p>Niya Infotech, with over 5+ years of experience, excels in secure, functional websites that boost business performance. Our expert team combines creativity and technical skill for visually appealing, highly functional sites. Offering global full-stack development, innovative design, SEO expertise, and timely solutions, we convert visitors into loyal customers. Niya Infotech is your ideal Business Partner.</p>
 
                         <div class="sidebar-btn">
-                            <a href="contact.html" class="default-btn">Let’s Talk</a>
+                            <a asp-controller="Home" asp-action="Contact" class="default-btn">Let’s Talk</a>
                         </div>
                     </div>
                     <div class="sidebar-contact-info">
                         <h3>Contact Information</h3>
 
                         <ul class="info-list">
-                            <li><i class="ri-phone-fill"></i> <a href="tel:9901234567">+91 91577 91901/02</a></li>
+                            <li><i class="ri-phone-fill"></i> <a href="tel:9157791901">+91 91577 91901/02</a></li>
 
-                            <li><i class="ri-mail-line"></i> <a href="/cdn-cgi/l/email-protection#62010d180722050f030b0e4c010d0f"><span class="__cf_email__" data-cfemail="70131f0a1530171d11191c5e131f1d">info.niyainfotech@gmail.com</span></a></li>
+                            <li><i class="ri-mail-line"></i> <a href="mailto:info.niyainfotech@gmail.com"><span class="__cf_email__">info.niyainfotech@gmail.com</span></a></li>
 
                             <li><i class="ri-map-pin-line"></i>Office No.512, Runway Heights, 150ft Ring Road, Near Ayodhya Chowk, Rajkot - 360006</li>
                         </ul>
@@ -176,7 +165,7 @@
                         <li><a href="https://www.instagram.com/niyainfotech/?hl=en" target="_blank"><i class="ri-instagram-fill"></i></a></li>
                         <li><a href="https://www.linkedin.com/company/niya-infotech/posts/?feedView=all" target="_blank"><i class="ri-linkedin-fill"></i></a></li>
                     </ul>
-                    <div class="contact-form">
+                   @*  <div class="contact-form">
                         <h3>Ready to Get Started?</h3>
 
                         <form id="contactForm">
@@ -216,7 +205,7 @@
                                 </div>
                             </div>
                         </form>
-                    </div>
+                    </div> *@
                 </div>
             </div>
         </div>
@@ -273,11 +262,11 @@
 
                 <div class="col-lg-3 col-md-6">
                     <div class="single-footer-widget ps-5" data-aos="fade-up" data-aos-delay="70" data-aos-duration="700" data-aos-once="true">
-                        <h3>Pages</h3>
+                        <h3>Quick Links</h3>
 
                         <ul class="quick-links">
                             <li><a asp-controller="Home" asp-action="Contact">Contact Us</a></li>
-                            <li><a href="purchase-guide.html">Get In Touch</a></li>
+                            @* <li><a href="purchase-guide.html">Get In Touch</a></li> *@
                             <li><a asp-controller="Home" asp-action="FAQ">FAQ's</a></li>
                         </ul>
                     </div>
