@@ -65,23 +65,23 @@ namespace Niya_Infotech_Web.Controllers
                 var smtpClient = new SmtpClient("smtp.gmail.com")
                 {
                     Port = 587,
-                    Credentials = new NetworkCredential("bodasahil14@gmail.com", "itzw nzlz bmru blvb"),
+                    Credentials = new NetworkCredential("info.niyainfotech@gmail.com", "tfrf wetq lwtp xtyl"),
                     EnableSsl = true,
                 };
 
                 var mailMessage = new MailMessage
                 {
-                    From = new MailAddress("bodasahil14@gmail.com"),
+                    From = new MailAddress("info.niyainfotech@gmail.com"),
                     Subject = subject,
                     Body = $"Name: {name}\nEmail: {email}\nPhone: {phone}\nMessage: {message}",
                     IsBodyHtml = false,
                 };
 
-                mailMessage.To.Add("bodasahil14@gmail.com");
+                mailMessage.To.Add("info.niyainfotech@gmail.com");
 
                 smtpClient.Send(mailMessage);
 
-                ViewBag.Message = "Email sent successfully!";
+                ViewBag.Message = "Email sent successfully! We Will Contact You Soon...";
                 ModelState.Clear();
                 return View();
             }

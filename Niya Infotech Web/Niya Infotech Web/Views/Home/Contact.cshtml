@@ -26,7 +26,13 @@
                     <span>LET'S TALK</span>
                     <h3>We Would Like To Hear From You Anytime <span class="overlay"></span></h3>
 
-                    
+                    @if (ViewBag.Message != null)
+                    {
+                        <div class="alert alert-info">
+                            @ViewBag.Message
+                        </div>
+                    }
+
                     <form class="contact-form" asp-action="Contact" method="post">
                         <div class="row">
                             <div class="col-lg-6 col-md-12">
@@ -84,12 +90,7 @@
     </div>
 </div>
 
-@if (ViewBag.Message != null)
-{
-    <div class="alert alert-info">
-        @ViewBag.Message
-    </div>
-}
+
 
 <!-- End Talk Area -->
 <!-- Start Map Area -->
